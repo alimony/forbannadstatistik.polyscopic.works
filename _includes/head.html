@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>{% if page.title %}{{ page.title | strip_html }} ∰ {% endif %}{{ site.title }}</title>
+	<meta name="description" content="{{ page.description }}" />
+	<meta name="author" content="Markus Amalthea Magnuson" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic" />
+	<link rel="stylesheet" href="/css/style.1.css" />
+	<link rel="canonical" href="{{ site.live_url }}{{ page.url | remove:'index.html' }}" />
+	<script>
+	if (window.location.hostname === '{{ site.live_hostname }}') {
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', '{{ site.google_analytics_id }}']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	}
+	</script>
+</head>

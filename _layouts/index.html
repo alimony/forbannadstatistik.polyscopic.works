@@ -1,0 +1,22 @@
+{% include head.html %}
+<body>
+	<div id="wrapper">
+		<h1><span class="logo">∰</span>Förbannad statistik</h1>
+		<p>Det här är en samling intressanta samhällsfenomen i form av statistik från bland annat <a href="http://www.scb.se" target="_blank">Statistiska centralbyrån</a> och <a href="http://epp.eurostat.ec.europa.eu/portal/page/portal/eurostat/home/" target="_blank">Eurostat</a>. Förhoppningsvis kan de olika diagrammen uppmärksamma siffror och samband som annars kanske är svårtillgängliga för de flesta. <a href="mailto:{{ site.email }}">Skicka</a> gärna synpunkter, kommentarer, eller förslag på nya sidor.</p>
+		<ul>
+		{% comment %}
+		This loop is an insane hack, but it's the only way to get GitHub Pages
+		to sort the list of pages in the desired order.
+		{% endcomment %}
+		{% for order in (1..site.pages.size) %}
+			{% for page in site.pages %}
+				{% if page.order == order %}
+					<li><a href="{{ page.url | remove:'index.html' }}">{{ page.title|strip_html }}</a></li>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+		</ul>
+		{% include footer.html %}
+	</div>
+</body>
+</html>

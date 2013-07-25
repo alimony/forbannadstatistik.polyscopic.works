@@ -1,0 +1,8 @@
+safe: true
+timezone: Europe/Stockholm
+
+title: Förbannad statistik
+live_url: http://forbannadstatistik.se
+live_hostname: forbannadstatistik.se
+email: info@forbannadstatistik.se
+google_analytics_id: UA-43257918-1
