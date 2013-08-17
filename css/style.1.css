@@ -30,6 +30,16 @@ h1 {
 		padding-right: 0.4em;
 	}
 
+	/* This is a hack to target only Firefox, fixing up the logo appearance. */
+	@-moz-document url-prefix() {
+		h1 .logo {
+			font-size: 70%;
+			font-weight: normal;
+			font-style: italic;
+			padding-right: 0.75em;
+		}
+	}
+
 h2 {
 	margin: 0;
 	font-weight: normal;
