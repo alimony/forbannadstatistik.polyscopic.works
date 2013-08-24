@@ -13,6 +13,7 @@
 	if (window.location.hostname === '{{ site.live_hostname }}') {
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', '{{ site.google_analytics_id }}']);
+		_gaq.push(['_setSiteSpeedSampleRate', 100]);
 		_gaq.push(['_trackPageview']);
 		(function() {
 			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
