@@ -2,7 +2,9 @@ safe: true
 timezone: Europe/Stockholm
 
 title: Förbannad statistik
+description: En samling intressanta samhällsfenomen i form av statistik som annars kanske är svårtillgänglig för de flesta.
 live_url: http://forbannadstatistik.se
 live_hostname: forbannadstatistik.se
 email: info@forbannadstatistik.se
+live_rss_url: http://forbannadstatistik.se/feed.xml
 google_analytics_id: UA-43257918-1

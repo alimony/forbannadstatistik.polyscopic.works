@@ -1,0 +1,27 @@
+---
+layout: none
+exclude_from_rss: true
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ site.title | xml_escape }}</title>
+		<link>{{ site.live_url }}</link>
+		<description>{{ site.description | xml_escape }}</description>
+		<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+		<atom:link href="{{ site.live_rss_url }}" rel="self" type="application/rss+xml" />
+		<language>sv</language>
+		{% for page in site.pages %}
+			{% if page.exclude_from_rss != true %}
+			<item>
+				<title>{{ page.title | strip_html | remove:'&shy;' | xml_escape }}</title>
+				<link>{{ site.live_url }}{{ page.url | remove:'index.html' }}</link>
+				<description>{{ page.description | xml_escape }}</description>
+				<author>{{ site.email }} ({{ site.title | xml_escape }})</author>
+				<pubDate>{{ page.date | date_to_rfc822 }}</pubDate>
+				<guid isPermaLink="true">{{ site.live_url }}{{ page.url | remove:'index.html' }}</guid>
+			</item>
+			{% endif %}
+		{% endfor %}
+	</channel>
+</rss>
