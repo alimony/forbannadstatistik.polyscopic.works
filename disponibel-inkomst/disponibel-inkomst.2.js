@@ -150,4 +150,7 @@
 
 		chart.draw(chartData, $.extend({}, FORBANNAD.defaultChartOptions, additionalChartOptions));
 	}
+
+	$('#first-year').html(YEARS[0]);
+	$('#info').show();
 }());
