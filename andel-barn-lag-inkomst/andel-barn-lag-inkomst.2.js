@@ -117,4 +117,10 @@
 
 		chart.draw(chartData, $.extend({}, FORBANNAD.defaultChartOptions, additionalChartOptions));
 	}
+
+	$('#first-year').html(YEARS[0]);
+	$('#second-year').html(YEARS[YEARS.length - 1]);
+	$('#first-percentage').html(Math.round(dataArray[0][0]));
+	$('#second-percentage').html(Math.round(dataArray[dataArray.length - 1][0]));
+	$('#info').show();
 }());
