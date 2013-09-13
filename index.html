@@ -6,7 +6,7 @@ exclude_from_rss: true
 {% include head.html %}
 <body>
 	<div id="wrapper">
-		<h1><span class="logo">∰</span>Förbannad statistik</h1>
+		<h1><span class="logo">∰</span>{{ site.title }}</h1>
 		<p>Det här är en samling intressanta samhällsfenomen i form av statistik från bland annat <a href="http://www.scb.se" target="_blank">Statistiska centralbyrån</a>, <a href="http://www.oecd.org/eco/" target="_blank">OECD</a> och <a href="http://epp.eurostat.ec.europa.eu/portal/page/portal/eurostat/home/" target="_blank">Eurostat</a>. Förhoppningsvis kan de olika diagrammen uppmärksamma siffror och samband som annars kanske är svårtillgängliga för de flesta. <a href="mailto:{{ site.email }}">Skicka</a> gärna synpunkter, kommentarer, eller förslag på nya sidor.</p>
 		<ul>{% comment %}
 		This loop is an insane hack, but it's the only way to get GitHub Pages
