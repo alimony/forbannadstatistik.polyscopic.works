@@ -6,6 +6,12 @@
 	<meta name="description" content="{{ page.description }}" />
 	<meta name="author" content="Markus Amalthea Magnuson" />
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta property="og:title" content="{% if page.title %}{{ page.title | strip_html }} ∰ {% endif %}{{ site.title }}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="{{ site.live_url }}{{ page.url | remove:'index.html' }}" />
+	<meta property="og:image" content="{{ site.live_url }}/img/forbannad-statistik-200x200px.png" />
+	<meta property="og:site_name" content="{{ site.title }}" />
+	<meta property="og:description" content="{{ page.description }}" />
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic" />
 	<link rel="stylesheet" href="/css/style.3.css" />
 	<link rel="canonical" href="{{ site.live_url }}{{ page.url | remove:'index.html' }}" />
