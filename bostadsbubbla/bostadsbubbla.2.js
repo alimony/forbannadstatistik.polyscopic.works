@@ -1,8 +1,6 @@
 (function () {
 	'use strict';
 
-	// This is data from OECD:
-	// http://www.oecd.org/eco/outlook/economicoutlookannextables.htm
 	// These are percentual changes from year to year, which we will then
 	// recalculate to an index series starting at index 100.
 	var dataArray = [

@@ -14,8 +14,6 @@
 
 	var HEADERS = ['År', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Medelvärde', 'Median'];
 
-	// This is data from SCB:
-	// http://www.scb.se/Pages/TableAndChart____163544.aspx
 	var dataArray = [
 		//         Decile 1, Decile 2, Decile 3, Decile 4, Decile 5, Decile 6, Decile 7, Decile 8, Decile 9, Decile 10, Average, Median
 		/* 1991 */ [72800,   104700,   118500,   131200,   143200,   156600,   172500,   192400,   220300,   328200,    164000,  149300],

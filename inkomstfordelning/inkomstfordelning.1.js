@@ -15,9 +15,6 @@
 	];
 
 	var HEADERS = ['År', 'Gini-koefficient'];
-
-	// This is data from SCB:
-	// http://www.scb.se/Pages/SSD/SSD_SelectVariables____340487.aspx?px_tableid=ssd_extern%3aDispInk8
 	var dataArray = [
 		/* 1975 */ [0.217],
 		/* 1978 */ [0.205],
@@ -30,8 +27,8 @@
 		/* 1986 */ [0.220],
 		/* 1987 */ [0.209],
 		/* 1988 */ [0.209],
-		/* 1989 */ [0.213],
-		/* 1990 */ [0.220],
+		/* 1989 */ [0.234],
+		/* 1990 */ [0.237],
 		/* 1991 */ [0.249],
 		/* 1992 */ [0.241],
 		/* 1993 */ [0.243],
