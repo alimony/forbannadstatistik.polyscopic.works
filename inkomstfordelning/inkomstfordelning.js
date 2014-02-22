@@ -12,7 +12,7 @@
 		'1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989',
 		'1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
 		'2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009',
-		'2010', '2011'
+		'2010', '2011', '2012'
 	];
 
 	var HEADERS = ['År', 'Gini-koefficient'];
@@ -50,7 +50,8 @@
 		/* 2008 */ [0.314],
 		/* 2009 */ [0.320],
 		/* 2010 */ [0.325],
-		/* 2011 */ [0.326]
+		/* 2011 */ [0.326],
+		/* 2012 */ [0.320]
 	];
 
 	if (FETCH_LIVE_RESULTS) {
@@ -113,6 +114,16 @@
 	// top of this file, or an updated copy of the same object, if live data was
 	// fetched from SCB.
 	function drawChart() {
+		// Find the highest coefficient and save its value and year for
+		// insertion in the last explanatory paragraph.
+		var yearsArray = $.map(dataArray, function (item) {
+			return item[0];
+		});
+		var largestValue = Math.max.apply(Math, yearsArray);
+		var highestYear = YEARS[yearsArray.indexOf(largestValue)];
+
+		$('#highest-year').html(highestYear);
+
 		// Add year header to each row.
 		$.each(dataArray, function (index, element) {
 			element.unshift(YEARS[index]);
@@ -123,9 +134,18 @@
 
 		var chartData = google.visualization.arrayToDataTable(dataArray);
 
+		var formatter = new google.visualization.NumberFormat(FORBANNAD.numberFormats.threeDigitDecimal);
+
+		formatter.format(chartData, 1);
+
 		var additionalChartOptions = {
 			colors: FORBANNAD.defaultColors,
-			lineWidth: FORBANNAD.lineWidths.medium
+			lineWidth: FORBANNAD.lineWidths.medium,
+			hAxis: {
+				viewWindow: {
+					max: dataArray.length
+				}
+			}
 		};
 
 		var chart = new google.visualization.LineChart(document.getElementById('chart'));
