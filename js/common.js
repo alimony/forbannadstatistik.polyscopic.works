@@ -62,6 +62,9 @@
 				groupingSymbol: ' ',
 				suffix: ' SEK'
 			},
+			threeDigitDecimal: {
+				fractionDigits: 3,
+			},
 			twoDigitPercentage: {
 				fractionDigits: 2,
 				suffix: '%'

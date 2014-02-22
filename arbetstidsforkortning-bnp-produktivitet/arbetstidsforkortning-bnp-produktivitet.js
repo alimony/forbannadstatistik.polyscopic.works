@@ -1,3 +1,4 @@
+/* global FORBANNAD */
 /* jshint -W100 */
 (function () {
 	'use strict';

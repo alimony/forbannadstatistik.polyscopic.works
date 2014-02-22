@@ -1,3 +1,4 @@
+/* global FORBANNAD */
 (function () {
 	'use strict';
 

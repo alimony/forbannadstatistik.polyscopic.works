@@ -1,3 +1,4 @@
+/* global FORBANNAD */
 (function () {
 	'use strict';
 
@@ -89,27 +90,27 @@
 				$.each(data.data, function (index, element) {
 					// The first half of the returned data array will be the population
 					// values and the second half will be the employed values.
-					var year = parseInt(element['key'][2], 10);
+					var year = parseInt(element.key[2], 10);
 					results[year] = results[year] || { population: 0, employed: 0 };
-					if (element['key'][1] === 'totalt') {
-						results[year].population = parseInt(element['values'][0] * 1000, 10);
+					if (element.key[1] === 'totalt') {
+						results[year].population = parseInt(element.values[0] * 1000, 10);
 					}
-					else if (element['key'][1] === 'sysselsatta') {
-						results[year].employed = parseInt(element['values'][0] * 1000, 10);
+					else if (element.key[1] === 'sysselsatta') {
+						results[year].employed = parseInt(element.values[0] * 1000, 10);
 					}
 					else {
-						console.log('Received unknown key %s', element['key'][1]);
+						console.log('Received unknown key %s', element.key[1]);
 					}
 				});
 			}),
 			$.post(API_URL_2, JSON.stringify(POST_DATA_2), function (data) {
 				$.each(data.data, function (index, element) {
-					var year = element['key'][1];
+					var year = element.key[1];
 					results[year] = results[year] || { population: 0, employed: 0 };
-					if (element['key'][0] === 'sysselsatta') {
-						results[year].employed = parseInt(element['values'][0] * 100, 10);
+					if (element.key[0] === 'sysselsatta') {
+						results[year].employed = parseInt(element.values[0] * 100, 10);
 					}
-					results[year].population += parseInt(element['values'][0] * 100, 10);
+					results[year].population += parseInt(element.values[0] * 100, 10);
 				});
 			})
 		)
