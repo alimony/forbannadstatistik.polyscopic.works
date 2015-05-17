@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>{% if page.title %}{{ page.title | strip_html }} ∰ {% endif %}{{ site.title }}</title>
+	<title>{% if page.title %}{{ page.title | markdownify | strip_html | strip_newlines }} ∰ {% endif %}{{ site.title }}</title>
 	<meta name="description" content="{{ page.description }}" />
 	<meta name="author" content="Markus Amalthea Magnuson" />
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<meta property="og:title" content="{% if page.title %}{{ page.title | strip_html }} ∰ {% endif %}{{ site.title }}" />
+	<meta property="og:title" content="{% if page.title %}{{ page.title | markdownify | strip_html | strip_newlines }} ∰ {% endif %}{{ site.title }}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="{{ site.live_url }}{{ page.url | remove:'index.html' }}" />
 	<meta property="og:image" content="{{ site.live_url }}/img/forbannad-statistik-200x200px.png" />

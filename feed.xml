@@ -14,7 +14,7 @@ exclude_from_rss: true
 		{% for page in site.pages %}
 			{% if page.exclude_from_rss != true %}
 			<item>
-				<title>{{ page.title | strip_html | remove:'&shy;' | xml_escape }}</title>
+				<title>{{ page.title | markdownify | strip_html | strip_newlines | xml_escape }}</title>
 				<link>{{ site.live_url }}{{ page.url | remove:'index.html' }}</link>
 				<description>{{ page.description | xml_escape }}</description>
 				<author>{{ site.email }} ({{ site.title | xml_escape }})</author>
