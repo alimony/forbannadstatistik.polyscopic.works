@@ -1,5 +1,15 @@
 safe: true
 timezone: Europe/Stockholm
+markdown: kramdown
+
+exclude: [
+    '.jshintrc',
+    'CNAME',
+    'Gemfile',
+    'Gemfile.lock',
+    'psd',
+    'README.md'
+]
 
 title: Förbannad statistik
 description: En samling intressanta samhällsfenomen i form av statistik som annars kanske är svårtillgänglig för de flesta.
