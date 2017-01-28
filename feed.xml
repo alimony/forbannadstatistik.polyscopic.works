@@ -14,7 +14,7 @@ exclude_from_rss: true
 		<atom:link href="{{ site.live_rss_url }}" rel="self" type="application/rss+xml" />
 		<language>sv</language>
 		{% for page in site.pages %}
-			{% if page.exclude_from_rss != true %}
+			{% if page.exclude_from_rss != true and page.title %}
 			<item>
 				<title>{{ page.title | markdownify | strip_html | strip_newlines | xml_escape }}</title>
 				<link>{{ site.live_url }}{{ page.url | remove:'index.html' }}</link>
