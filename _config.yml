@@ -11,6 +11,9 @@ exclude: [
     'README.md'
 ]
 
+sass:
+    style: compressed
+
 title: Förbannad statistik
 description: En samling intressanta samhällsfenomen i form av statistik som annars kanske är svårtillgänglig för de flesta.
 live_url: http://forbannadstatistik.se

@@ -8,9 +8,7 @@ exclude_from_rss: true
 		<title>{{ site.title | xml_escape }}</title>
 		<link>{{ site.live_url }}</link>
 		<description>{{ site.description | xml_escape }}</description>
-		{% if site.time %}
 		<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-		{% endif %}
 		<atom:link href="{{ site.live_rss_url }}" rel="self" type="application/rss+xml" />
 		<language>sv</language>
 		{% for page in site.pages %}
@@ -20,9 +18,7 @@ exclude_from_rss: true
 				<link>{{ site.live_url }}{{ page.url | remove:'index.html' }}</link>
 				<description>{{ page.description | xml_escape }}</description>
 				<author>{{ site.email }} ({{ site.title | xml_escape }})</author>
-				{% if page.date %}
 				<pubDate>{{ page.date | date_to_rfc822 }}</pubDate>
-				{% endif %}
 				<guid isPermaLink="true">{{ site.live_url }}{{ page.url | remove:'index.html' }}</guid>
 			</item>
 			{% endif %}
