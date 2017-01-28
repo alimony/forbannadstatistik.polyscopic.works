@@ -1,0 +1,151 @@
+---
+layout: null
+exclude_from_rss: true
+---
+body {
+	margin: 0;
+	padding: 2em;
+	background-color: #efefef;
+	font: 110%/1.4 "Playfair Display", Georgia, Times, "Times New Roman", serif;
+}
+
+@media all and (max-width: 36em) { /* Same as #wrapper width. */
+	body { padding: 1em; }
+}
+
+.lighter { color: #666; }
+
+.nobr { white-space: nowrap; }
+
+#wrapper {
+	max-width: 36em;
+	margin: 0 auto;
+}
+
+h1 {
+	margin: 0;
+	font-weight: 900;
+	line-height: 1;
+}
+	h1 .logo {
+		font-family: Georgia, serif;
+		color: #993300;
+		vertical-align: 0.1em;
+		padding-right: 0.4em;
+	}
+
+h2 {
+	margin: 0.1em 0 0 0;
+	font-weight: normal;
+	line-height: 1;
+}
+
+p { margin: 1em 0 0 0; }
+
+ul {
+	margin: 1em 0 0 0;
+	padding: 0 0 0 0;
+	list-style: none;
+}
+
+li { padding: 0 0 0 1em; }
+
+li:before {
+	content: "•";
+	position: absolute;
+	margin-left: -1em;
+}
+
+a {
+	font-weight: bold;
+	color: #993300;
+	text-decoration: underline;
+	-webkit-transition: color 0.075s ease-in;
+	-moz-transition: color 0.075s ease-in;
+	-o-transition: color 0.075s ease-in;
+	transition: color 0.075s ease-in;
+}
+
+a:hover { color: #cc3300; }
+
+.hidden { display: none; }
+
+table {
+	width: 100%;
+	margin: 1em 0 0 0;
+	font-size: 110%;
+	border-collapse: collapse;
+}
+
+thead,
+td:first-child {
+	font-weight: bold;
+}
+
+thead td {
+	line-height: 1.1;
+	padding-bottom: 0.3em;
+}
+
+tbody { line-height: 1.6; }
+
+tbody tr:first-child td { border-top: 0.1em solid black; }
+
+tbody tr:nth-child(even) { background-color: #e0e0e0; }
+
+tbody tr:hover { background-color: #ccc; }
+
+td {
+	vertical-align: top;
+	width: 28%;
+	padding: 0 0.5em 0 0;
+}
+
+td:first-child {
+	width: 16%;
+	padding-left: 0.25em;
+}
+
+td:last-child { padding-right: 0; }
+
+td .lighter {
+	font-size: 90%;
+	font-weight: normal;
+}
+
+td.message {
+	text-align: center;
+	font-weight: normal;
+	padding: 1em 0;
+}
+
+#chart {
+	margin-top: 1em;
+	height: 230px;
+}
+	#chart.bostadsbubbla { height: 400px; }
+	#chart.disponibel-inkomst { height: 500px; }
+	#chart.privat-skuldsattningsgrad { height: 700px; }
+
+.sources { margin-top: 1em; }
+	.sources p,
+	.sources ul {
+		font-size: 85%;
+	}
+	.sources p { margin-top: 0; }
+
+#footer {
+	text-align: right;
+	margin-top: 1em;
+	border-top: 0.1em solid #666;
+	padding-top: 1em;
+	overflow: hidden;
+}
+	#footer p {
+		font-size: 90%;
+		margin: 0;
+	}
+	#footer .left { float: left; }
+	#footer .right { float: right; }
+		#footer .right a { padding-left: 1em; }
+			#footer .right a:first-child { padding-left: 0; }
