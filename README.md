@@ -13,4 +13,5 @@ Developing locally is as easy as running `bundle exec jekyll serve --watch` from
 
 * Leo-Nathorst-Böös
 * Simon Eliasson
+* Robin Landau
 * Håkan Waara
