@@ -5,11 +5,13 @@ markdown: kramdown
 exclude: [
     '.jshintrc',
     'CNAME',
+    'css',
     'Gemfile',
     'Gemfile.lock',
+    'Guardfile',
     'psd',
     'README.md',
-    'css'
+    'vendor'
 ]
 
 sass:
