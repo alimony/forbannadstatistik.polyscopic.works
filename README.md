@@ -10,7 +10,7 @@ Local development
 
 To install dependencies:
 
-    bundle install --path vendor/bundle
+    bundle install
 
 To update dependencies:
 
