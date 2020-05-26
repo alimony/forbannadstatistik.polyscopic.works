@@ -49,7 +49,7 @@
 		],
 		texts: {
 			fetchingData: 'Hämtar data från SCB…',
-			couldNotFetchData: 'Kunde inte hämta data från SCB.<br>Pröva att <a href="." target="_self">ladda om</a> sidan.<br>Om det ändå inte fungerar, <a href="mailto:info@forbannadstatistik.se" target="_self">skriv gärna</a> och berätta det.'
+			couldNotFetchData: 'Kunde inte hämta data från SCB.<br>Pröva att <a href="." target="_self">ladda om</a> sidan.<br>Om det ändå inte fungerar, <a href="mailto:markus@polyscopic.works" target="_self">skriv gärna</a> och berätta det.'
 		},
 		lineWidths: {
 			thin: 1,

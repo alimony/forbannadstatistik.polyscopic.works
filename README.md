@@ -1,7 +1,7 @@
 Förbannad statistik
 ===================
 
-This is the source repository for [forbannadstatistik.se](https://forbannadstatistik.se/)
+This is the source repository for [forbannadstatistik.polyscopic.works](https://forbannadstatistik.polyscopic.works/)
 
 There is only the `gh-pages` branch, which when pushed to will build the live site using [Jekyll](http://jekyllrb.com/).
 

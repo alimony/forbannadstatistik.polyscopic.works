@@ -19,8 +19,8 @@ sass:
 
 title: Förbannad statistik
 description: En samling intressanta samhällsfenomen i form av statistik som annars kanske är svårtillgänglig för de flesta.
-live_url: https://forbannadstatistik.se
-live_hostname: forbannadstatistik.se
-email: info@forbannadstatistik.se
-live_rss_url: https://forbannadstatistik.se/feed.xml
+live_url: https://forbannadstatistik.polyscopic.works
+live_hostname: forbannadstatistik.polyscopic.works
+email: markus@polyscopic.works
+live_rss_url: https://forbannadstatistik.polyscopic.works/feed.xml
 google_analytics_id: UA-43257918-1
