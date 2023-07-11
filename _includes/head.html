@@ -16,19 +16,5 @@
 	<link rel="stylesheet" href="/main.css" />
 	<link rel="canonical" href="{{ site.live_url }}{{ page.url | remove:'index.html' }}" />
 	<link rel="alternate" type="application/rss+xml" title="Prenumerera på {{ site.title }}" href="{{ site.live_rss_url }}" />
-	<script>
-	var _paq = window._paq = window._paq || [];
-	_paq.push(['trackPageView']);
-	_paq.push(['enableLinkTracking']);
-	(function() {
-		var u = 'https://analytics.polyscopic.works/';
-		_paq.push(['setTrackerUrl', u + 'matomo.php']);
-		_paq.push(['setSiteId', '9']);
-		var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-		g.type = 'text/javascript';
-		g.async = true;
-		g.src = u + 'matomo.js';
-		s.parentNode.insertBefore(g, s);
-	})();
-	</script>
+	<script defer data-domain="forbannadstatistik.polyscopic.works" src="https://plausible.io/js/script.js"></script>
 </head>
